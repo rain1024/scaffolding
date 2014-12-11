@@ -1,4 +1,4 @@
-let g:SBTDirectory='/home/rain/.vim/bundle/scaffolding/'
+let g:ScaffoldingDirectory='/home/rain/.vim/bundle/scaffolding/'
 
 " Vim comments start with a double quote.
 " Function definition is VimL. We can mix VimL and Python in
@@ -27,7 +27,7 @@ def createDirectory(path):
 	if not os.path.exists(path):
 		os.makedirs(path)
 
-pluginDir = vim.eval("g:SBTDirectory")
+pluginDir = vim.eval("g:ScaffoldingDirectory")
 templateDir = os.path.join(pluginDir, "templates", "sbt")
 currentDir= os.getcwd()
 projectName = "abc"
