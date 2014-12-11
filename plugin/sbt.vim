@@ -1,4 +1,4 @@
-let g:SBTDirectory='/home/rain/.vim/bundle/sbt/'
+let g:SBTDirectory='/home/rain/.vim/bundle/scaffolding/'
 
 " Vim comments start with a double quote.
 " Function definition is VimL. We can mix VimL and Python in
@@ -45,5 +45,3 @@ EOF
 " We can continue writing VimL or python again.
 
 endfunction
-
-call SbtScaff()
