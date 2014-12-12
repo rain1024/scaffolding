@@ -8,7 +8,7 @@ The following features and functionallity are provided by `Saffolding`
 
 * Scaff new sbt project
 
-### Installation
+### Step 1/3: Installation
 
 You can install `scaffolding` easily via Pathogen or Vundle
 
@@ -27,7 +27,15 @@ Add below code to your `~/.vimrc`
 Plugin 'rain1024/scaffolding'
 ```
 
-### Usage
+### Step 2/3: Configuration
+
+You must configuration plugin directory
+
+```
+let g:ScaffoldingDirectory='/home/rain/.vim/bundle/scaffolding/'
+```
+
+### Step 3/3: Usage
 
 To scaffolding new project in current folder
 
