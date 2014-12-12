@@ -26,3 +26,11 @@ Add below code to your `~/.vimrc`
 ```
 Plugin 'rain1024/scaffolding'
 ```
+
+### Usage
+
+To scaffolding new project in current folder
+
+```
+:call SbtScaff()
+```
