@@ -17,7 +17,7 @@ The `Scaffolding` allows you scaff your new project quickly.
 
 The following features and functionallity are provided by `Saffolding`
 
-* Scaff new sbt project
+* Scaff new project. We now support [sbt](https://github.com/rain1024/scaffolding/wiki/SBT), [python](https://github.com/rain1024/scaffolding/wiki/Python)
 
 ### Step 1/3: Installation
 
@@ -55,6 +55,7 @@ Open `vim` in a folder. Inside `vim`, run command
 ```
 :Scaff
 
+Enter type of project (python, sbt, q for quit): sbt
 Enter name of your new sbt project: hello 
 
 Project hello is created

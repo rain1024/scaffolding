@@ -10,7 +10,7 @@ python << EOF
 import vim, os, sys
 import shutil
 
-def displayWelcomeMessage():
+def display_welcome_message():
 	message =  "  _____   __   ____  _____  _____   ___   _      ___    ____  ____    ____ \n"
 	message += " / ___/  /  ] /    ||     ||     | /   \ | |    |   \  |    ||    \  /    |\n"
 	message += "(   \_  /  / |  o  ||   __||   __||     || |    |    \  |  | |  _  ||   __|\n"
@@ -27,28 +27,47 @@ def input(message = 'input: '):
 	vim.command('call inputrestore()')
 	return vim.eval('user_input')
 
-def createDirectory(path):
-	# create directory if not exist
-	if not os.path.exists(path):
-		os.makedirs(path)
+def create_project(project_type, project_name):
+	plugin_dir = vim.eval("g:ScaffoldingDirectory")
+	template_dir = os.path.join(plugin_dir, "templates", project_type)
+	current_dir= os.getcwd()
+	try:
+		shutil.copytree(template_dir, os.path.join(current_dir, project_name))
+	except Exception as e:
+		raise e
 
-displayWelcomeMessage()
+def display_success_message(project_name):
+	print("\t\nProject " + project_name + " is created.")
+	print("Enjoy Coding!")
+	input('')
 
-pluginDir = vim.eval("g:ScaffoldingDirectory")
-templateDir = os.path.join(pluginDir, "templates", "sbt")
-currentDir= os.getcwd()
+def display_fail_message():
+	print("\t\nWhat a Shame! We can not help you create your next awesome project >.<")
+	input('')
 
-projectName = input('Enter name of your new sbt project: ')
+SUPPORTED_PROJECT_TYPES= ['python', 'sbt']
 
-try:
-	shutil.copytree(templateDir, os.path.join(currentDir, projectName))
-except Exception as e:
-	raise e
+display_welcome_message()
 
-print("\t\nProject " + projectName + " is created.")
-print("Enjoy Coding!")
+can_continue = True 
+is_create = True
+while can_continue:
+	project_type = input('Enter type of project (python, sbt, q for quit): ')
+	if(project_type == 'q'):
+		is_create = False
+		can_continue = False
+	else:
+		if(project_type in SUPPORTED_PROJECT_TYPES):
+			can_continue = False
+		else:
+			print("\t\nWe just supported for 'python' or 'sbt' project")
 
-input('')
+if(is_create):
+	project_name = input('Enter name of project: ')
+	create_project(project_type, project_name)
+	display_success_message(project_name)
+else:
+	display_fail_message()
 
 EOF
 
@@ -57,4 +76,5 @@ endfunction
 " --------------------------------
 " Expose commands to the user
 " --------------------------------
+
 command! Scaff call Scaff()
