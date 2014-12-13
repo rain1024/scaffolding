@@ -50,8 +50,23 @@ let g:ScaffoldingDirectory='/home/rain/.vim/bundle/scaffolding/'
 
 To scaffolding new project in current folder
 
+Open `vim` in a folder. Inside `vim`, run command
+
 ```
 :Scaff
+
+Enter name of your new sbt project: hello 
+
+Project hello is created
+Enjoy Coding!
+```
+
+You will see a new folder 'hello' is created.
+
+```
+> cd hello
+> sbt run
+Hello, world
 ```
 
 ### License
