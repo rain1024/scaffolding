@@ -1,5 +1,15 @@
 ## The Scaffolding
 
+```
+ / ___/  /  ] /    ||     ||     | /   \ | |    |   \  |    ||    \  /    |
+(   \_  /  / |  o  ||   __||   __||     || |    |    \  |  | |  _  ||   __|
+ \__  |/  /  |     ||  |_  |  |_  |  O  || |___ |  D  | |  | |  |  ||  |  |
+ /  \ /   \_ |  _  ||   _] |   _] |     ||     ||     | |  | |  |  ||  |_ |
+ \    \     ||  |  ||  |   |  |   |     ||     ||     | |  | |  |  ||     |
+  \___|\____||__|__||__|   |__|    \___/ |_____||_____||____||__|__||___,_|
+                            The next scaffolding generation for Vim!       
+```
+
 ### Intro
 
 The `Scaffolding` allows you scaff your new project quickly. 
@@ -40,7 +50,7 @@ let g:ScaffoldingDirectory='/home/rain/.vim/bundle/scaffolding/'
 To scaffolding new project in current folder
 
 ```
-:call SbtScaff()
+:Scaff
 ```
 
 ### License
