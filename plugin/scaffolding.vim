@@ -45,7 +45,7 @@ def display_fail_message():
 	print("\t\nWhat a Shame! We can not help you create your next awesome project >.<")
 	input('')
 
-SUPPORTED_PROJECT_TYPES= ['python', 'sbt']
+SUPPORTED_PROJECT_TYPES= ['python', 'sbt', 'node']
 
 display_welcome_message()
 

@@ -1,0 +1,14 @@
+{
+  "name": "new-module",
+  "version": "1.0.0",
+  "description": "describe new module",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "author": "Brother Rain",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "chai": "~1.10.0"
+  }
+}
